@@ -1,8 +1,15 @@
-body{
+*{
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
-  background-color: #E5E5E5;
+}
+
+body, input, button, select, textarea{
   font-family: 'Poppins', sans-serif;
+}
+
+body{ 
+  background-color: #E5E5E5;  
 }
 
 body::before{
@@ -18,10 +25,11 @@ body::before{
 
 h1{
   font-family: 'Archivo', sans-serif;
-  font-weight: bold;
+  font-weight: bold;  
   font-size: 36px;
   line-height: 42px;
   color: #E5E5E5;
+  margin-bottom: 24px;
 }
 
 .page{
@@ -41,7 +49,7 @@ header p{
 }
 
 form{
-  min-height: 332px;
+  min-height: 900px;
   background-color: #FAFAFC;
   border-radius: 8px;
   margin-top: 38px;
@@ -49,12 +57,18 @@ form{
 }
 
 fieldset{
-  border: none;
+  border: none;  
+}
+
+.fieldset-wrapper{
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 
 fieldset legend{
   font-family: 'Archivo', sans-serif;  
-  font-weight: 600;
+  font-weight: bold;
   font-size: 24px;
   line-height: 34px;
   border-bottom: 1px solid #E6E6F0;
@@ -73,22 +87,46 @@ fieldset legend{
   font-size: 14px;
   line-height: 24px;
   color: #4E4958;
-}
+  }
 
 .input-wrapper label span{
-  margin-left: 20px;
-  font-family: 'Poppins';
+  margin-left: 20px; 
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
   line-height: 20px;
+  }
+
+.input-wrapper label span:hover{
+  color: #6c6a71;
+  }
+
+.input-wrapper textarea{
+  padding: 0;
+  height: 168px;
 }
 
-.input-wrapper input{
-background: #FAFAFC;
-border: 1px solid #E6E6F0;
-box-sizing: border-box;
-border-radius: 8px;
-width: 100%;
-padding: 10px;
+.input-wrapper input,
+.input-wrapper textarea,
+.input-wrapper select{
+  background: #FAFAFC;
+  color: #C1BCCC;
+  border: 1px solid #E6E6F0;
+  border-radius: 8px;
+  width: 100%;
+  height: 56px;
+  padding: 0 24px; 
+}
+
+.input-wrapper select {
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 10L12 14L16 10' stroke='%239C98A6' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  background-position: right 24px top 50%;
+}
+
+.input-wrapper textarea{
+  padding: 0;
+  height: 168px;   
 }
