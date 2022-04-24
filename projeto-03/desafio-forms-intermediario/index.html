@@ -14,19 +14,108 @@
 
 <body>
   <div class="page">
+
     <header>
       <h1>MENTORIA</h1>
       <p>Preencha o formulário abaixo para agendar a sua mentoria</p>
     </header>
 
     <form id="my-form">
+
       <fieldset>
-        <legend>INFORMAÇÕES PESSOAIS</legend>
+        <div class="field-wrapper">
+          <legend>INFORMAÇÕES PESSOAIS</legend>
+          <div class="cols">
+            <div class="input-wrapper">
+              <label for="name">Nome</label>
+              <input type="text" id="name">
+            </div>
+
+            <div class="input-wrapper">
+              <label for="sobrenome">Sobrenome</label>
+              <input type="text" id="sobrenome">
+            </div>
+          </div>
+
+          <div class="input-wrapper">
+            <label for="email">Email <span>(digite um email válido)</span></label>
+            <input type="email" id="email" required>
+          </div>
+
+          <div class="input-wrapper">
+            <label for="senha">Senha <span>(mínimo de 6 caracteres)</span></label>
+            <input type="password" id="senha" required>
+          </div>
+        </div>
+
       </fieldset>
 
+      <fieldset>
+        <div class="field-wrapper">
+          <legend>INFORMAÇÕES DO MENTOR</legend>
+          <div class="input-wrapper">
+            <label for="mentor">Nome do seu mentor <span>(só o primeiro nome)</span></label>
+            <input type="name" id="mentor" required>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+
+        <div class="field-wrapper">
+          <legend>SEUS HORÁRIOS DISPONÍVEIS</legend>
+          <legend>PRIMEIRA TURMA</legend>
+
+          <div class="cols">
+            <div class="input-wrapper">
+              <label for="data">Data <span>(DD/MM/AAAA)</span> </label>
+              <input type="date" id="data">
+            </div>
+
+            <div class="cols">
+              <div class="input-wrapper">
+                <label for="from">Das</label>
+                <input type="time" name="" id="from">
+              </div>
+
+              <div class="input-wrapper">
+                <label for="to1">Até</label>
+                <input type="time" id="to1">
+              </div>
+            </div>
+          </div>
+
+          <legend>SEGUNDA TURMA</legend>
+
+          <div class="cols">
+            <div class="input-wrapper">
+              <label for="data">Data <span>(DD/MM/AAAA)</span> </label>
+              <input type="date" id="data">
+            </div>
+
+            <div class="cols">
+              <div class="input-wrapper">
+                <label for="from2">Das</label>
+                <input type="time" name="" id="from2">
+              </div>
+
+              <div class="input-wrapper">
+                <label for="to2">Até</label>
+                <input type="time" id="to2">
+              </div>
+            </div>
+          </div>
+        </div>
+      </fieldset>
     </form>
 
+    <footer>
+      <input class="button" type="submit" value="Salvar Evento">
+    </footer>
+
+
   </div>
+
 </body>
 
 </html>
