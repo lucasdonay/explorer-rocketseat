@@ -81,11 +81,35 @@ display: flex;
 gap: 3.8rem;
 }
 
+ul li + li {
+  margin-top: 3.2rem;
+}
+
 /* media queries */
 
 @media (min-width:700px) {
+
+  body {
+    padding-top: 8rem;
+  }
   
-  main{
+  main {
+    max-width: 1020px;
     display: flex;
+    gap: 10rem;
   }  
+
+  main > div {
+    max-width: 484px;
+  }
+  
+  ul li {
+    gap: 5.3rem;
+    max-width: 450px;
+    align-items: center;
+  }
+
+  ul, li + li {
+    margin-top: 3.2rem;
+  }
 }
