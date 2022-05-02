@@ -1,0 +1,198 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --bg-color-hd: #8e9aaf;
+  --bg-color-main: #eff1ff;
+  --bg-color-h1: #cbc0d3;
+  --bg-color-h2: #feeafa;
+
+  --ff-h: "Staatliches", cursive;
+  --ff-body: "Palanquin", sans-serif;
+
+  --fc-h: #ffffff;
+  --fc-p: #23053a;
+  --fc-pic: #4a4e69;
+
+  --fs-hd: 4rem;
+  --fs-body: 1.3rem;
+  --fs-title2: 2rem;
+}
+
+body{
+  background-color: var(--bg-color-main);
+  display: grid;
+  font-size: var(--fs-body);
+  color: var(--fc-p);
+  font-family: var(--ff-body);
+}
+
+header {
+  background-color: var(--bg-color-hd);
+}
+
+header h1 {
+  background-color: var(--bg-color-h1);
+  color: var(--fc-h);
+  font-family: var(--ff-h);
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0.5rem;
+  font-size: var(--fs-hd);
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  margin-bottom: 2.9rem;
+}
+
+main {
+  padding: 0 3.3rem;
+  height: auto;
+  background-color: var(--bg-color-main);
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+  margin: 0 auto 5rem;
+}
+
+p{
+  max-width: 30rem;
+  margin: 2rem auto;
+  text-align: center; 
+}
+
+.card{
+  position: relative;
+}
+
+.card img {
+  height: 25rem;
+  width: 32rem;
+  object-fit: cover;
+  border-radius: 8px;
+
+  animation: runUp 800ms;
+  animation-timing-function: cubic-bezier(0, 1.07, 0.58, 1.72);
+
+  transition: all 200ms;
+}
+
+.card:nth-child(2) img, .card:nth-child(4) img {
+  height: 45rem;
+}
+
+.card img:hover {
+  transform: scale(1.05);
+  filter: contrast(110%);
+}
+
+h2{
+  background-color: #FEEAFA;
+  display: flex;
+  flex-direction: column;
+
+  position: absolute;
+  right: 2rem;
+  top: 2rem;
+
+  border-radius: 1rem;    
+  padding: 1rem 1rem;
+
+  text-transform: uppercase;
+
+  font-size: var(--fs-title2);
+  color: var(--fc-pic);
+  font-family: var(--ff-h);
+  font-weight: 400;
+  letter-spacing: 0.05em;
+
+  animation: runDown 800ms;
+  animation-timing-function: cubic-bezier(0.895, 0.03, 0.685, 0.22);
+
+  transition: all 200ms;
+}
+
+h2:hover{
+  transform: scale(1.02);
+  filter: drop-shadow(0px 0px 2px #8E9AAF)
+}
+
+header .logo {
+  position: relative;
+  width: fit-content;
+  margin: 5.2rem auto 4rem;
+
+  transition: 1s transform;
+}
+
+header .logo:hover {
+  transform: scale(1.2);
+}
+
+header .logo #moon {
+  position: relative;
+  z-index: 1;
+  animation: 5s moon-rotate infinite linear;
+}
+
+header .logo #ice-cream {
+  position: absolute;
+  top: 25%;
+  left: 4.5rem;
+  animation: 2s ice-cream-jump infinite ease-in-out;
+}
+
+@keyframes runUp {
+  0% {
+      opacity: 0;
+      transform: translateY(5rem);
+  }
+
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes runDown {
+  0% {
+      opacity: 0;
+      transform: translateY(-5rem);
+  }
+
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes ice-cream-jump {
+  0% {
+    transform: translate(-10rem, 2rem);
+    z-index: 1;
+  }
+
+  50% {
+    transform: translate(9rem, -3rem);
+  }
+
+  100% {
+    transform: translate(-10rem, 2rem);
+
+    z-index: 0;
+  }
+}
+
+@keyframes moon-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
