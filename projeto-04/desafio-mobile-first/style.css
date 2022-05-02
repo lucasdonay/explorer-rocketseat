@@ -24,15 +24,6 @@
   --fs-title2: 2rem;
 }
 
-.page{  
-  max-width: 30rem;
-  margin: auto 0;
-}
-
-img {
-  width: 100%;
-}
-
 body{
   background-color: var(--bg-color-main);
   display: grid;
@@ -42,7 +33,6 @@ body{
 }
 
 header {
-  z-index: 6;
   background-color: var(--bg-color-hd);
 }
 
@@ -146,14 +136,14 @@ header .logo:hover {
 header .logo #moon {
   position: relative;
   z-index: 1;
-  animation: 8s moon-rotate infinite linear;
+  animation: 5s moon-rotate infinite linear;
 }
 
 header .logo #ice-cream {
   position: absolute;
-  top: 10%;
+  top: 25%;
   left: 4.5rem;
-  animation: 4s ice-cream-jump infinite ease-in-out;
+  animation: 2s ice-cream-jump infinite ease-in-out;
 }
 
 @keyframes runUp {
