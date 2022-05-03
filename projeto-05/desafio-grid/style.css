@@ -335,4 +335,5 @@ main{
 .wrapper div:nth-child(4) {grid-area: D;}
 .wrapper div:nth-child(5) {grid-area: F;}
 .wrapper div:nth-child(6) {grid-area: E;}
+
 }
