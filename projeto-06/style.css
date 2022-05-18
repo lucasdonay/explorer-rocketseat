@@ -19,6 +19,14 @@ body{
   background-color: var(--bg-color);
   color: var(--text-color);
   font-family: 'Roboto', sans-serif;
+
+  display: grid;  
+  min-height: 100vh;
+}
+
+main {  
+  align-self: end;
+  justify-self: center;
 }
 
 button{
@@ -29,8 +37,13 @@ button{
 
 
 .timer {
-  font-size: 8.8rem;
+  font-size: clamp(3.2rem, 3.2rem + 10vw, 8.8rem);
   display: flex;
+  margin-bottom: 1.6rem;
+  /* text-align: center;
+  align-items: center; */
+  justify-content: center;
+  
 }
 
 .hide {
@@ -42,11 +55,25 @@ background-color: var(--bg-primary-light);
 display: flex;
 align-items: center;
 justify-content: center;
+gap: 3.2rem;
 border-radius: 8888888px;
+
+width: clamp(10rem, 10rem + 30vw, 22.8rem);
+height: clamp(8rem, 5rem + 10vw, 10.8rem);
 }
 
 .play svg path,
 .sound-on svg path,
 .set svg path {
   fill: var(--primary-color);
+}
+
+.controls .play svg {
+  width: 0.1rem,1rem + 10vw, 6.4rem;  
+}
+
+footer {  
+  align-self: end;
+  justify-self: end;
+  padding: 0 4rem 3.6rem ; 
 }
