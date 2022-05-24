@@ -6,9 +6,92 @@
 
 :root {
   font-size: 62.5%;
-  --hue: 194;
+  --hue: 240;
   --bg-color: hsl(var(--hue), 0%, 100%);
   --bg-color-light: hsla(var(--hue), 9%, 89%, 1);
   --primary-color: hsl(var(--hue), 6%, 21%);
-  --seconday-color: hsl(var(--hue), 97%, 31%);
+  --secondary-color: hsl(194, 97%, 31%);
+}
+
+body {
+  background: var(--bg-color);
+  color: var(--primary-color);
+  font-size: 12.6rem;
+  font-family: 'Roboto', sans-serif;
+  line-height: 14.8rem;
+  font-weight: 500;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  gap: 20rem;
+  align-items: center;
+  height: 100vh;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4.5rem;
+}
+
+.timer {
+  margin-bottom: 4.8rem;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.controls button:hover svg{
+  width: 53px;
+  height: 53px;
+}
+
+.sons button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 13.8rem;
+  height: 15.2rem;
+  border-radius: 24px;
+  background-color: var(--bg-color-light);
+}
+
+.sons button:hover{
+  background-color:var(--secondary-color);
+  fill: white;
+}
+
+.sons button:hover svg path {
+  fill: white;
+}
+
+.active {
+  background-color:var(--secondary-color);  
+}
+
+.active svg path {
+  fill: white;
+}
+
+.hide {
+  display: none;
+}
+
+.sons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+}
+
+.margin {
+  margin: 0 -20px 0 -20px;
 }
