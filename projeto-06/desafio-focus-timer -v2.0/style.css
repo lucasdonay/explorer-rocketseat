@@ -75,11 +75,11 @@ button {
 }
 
 .active {
-  background-color:var(--secondary-color);  
+  background-color:var(--secondary-color)!important;  
 }
 
 .active svg path {
-  fill: white;
+  fill: white; 
 }
 
 .hide {
