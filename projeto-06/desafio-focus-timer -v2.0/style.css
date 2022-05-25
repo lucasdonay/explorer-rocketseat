@@ -16,29 +16,32 @@
 body {
   background: var(--bg-color);
   color: var(--primary-color);
-  font-size: 12.6rem;
+  font-size: clamp(5rem, 5rem + 20vw, 12.6rem);
   font-family: 'Roboto', sans-serif;
   line-height: 14.8rem;
   font-weight: 500;
+  height: 100vh;
+  display: flex;
+  justify-content: center;  
 }
 
 main {
   display: flex;
   justify-content: center;
   gap: 20rem;
-  align-items: center;
-  height: 100vh;
+  align-items: center;  
 }
 
 .controls {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 4.5rem;
+  gap: 4.5rem;  
+  width: clamp(15rem, 15rem + 70vw, 34.2rem)
 }
 
 .timer {
-  margin-bottom: 4.8rem;
+  margin-bottom: 2.8rem;
 }
 
 button {
@@ -48,8 +51,8 @@ button {
 }
 
 .controls button:hover svg{
-  width: 53px;
-  height: 53px;
+  width: 5.5rem;
+  height: 5.3rem;
 }
 
 .sons button {
@@ -88,10 +91,18 @@ button {
 
 .sons {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: clamp(10rem, 10rem + 5vw, 13.8rem) clamp(10rem, 10rem + 5vw, 13.8rem);
   gap: 5rem;
 }
 
 .margin {
   margin: 0 -20px 0 -20px;
+}
+
+@media (max-width: 870px) {
+  main {
+    flex-direction: column;
+    align-items: center;
+    gap: 10rem;
+  }
 }
