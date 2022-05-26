@@ -13,13 +13,14 @@ const secondsDisplay = document.querySelector('.seconds')
 let minutes = Number(minutesDisplay.textContent)
 let timerTimeOut
 
+const forestAudio = new Audio('https://github.com/Paru369/focus-timer/blob/main/sounds/Floresta.wav?raw=true')
+const rainAudio = new Audio('https://github.com/Paru369/focus-timer/blob/main/sounds/Chuva.wav?raw=true')
+const coffeeAudio = new Audio('https://github.com/Paru369/focus-timer/blob/main/sounds/Cafeteria.wav?raw=true')
+const fireplaceAudio = new Audio('https://github.com/Paru369/focus-timer/blob/main/sounds/Lareira.wav?raw=true')
+const buttonPressAudio = new Audio('https://github.com/maykbrito/automatic-video-creator/blob/master/audios/button-press.wav?raw=true')
+const kitchenTimer = new Audio('https://github.com/maykbrito/automatic-video-creator/blob/master/audios/kichen-timer.mp3?raw=true')
+
 function Sounds() {
-  const forestAudio = new Audio('https://github.com/Paru369/focus-timer/blob/main/sounds/Floresta.wav?raw=true')
-  const rainAudio = new Audio('https://github.com/Paru369/focus-timer/blob/main/sounds/Chuva.wav?raw=true')
-  const coffeeAudio = new Audio('https://github.com/Paru369/focus-timer/blob/main/sounds/Cafeteria.wav?raw=true')
-  const fireplaceAudio = new Audio('https://github.com/Paru369/focus-timer/blob/main/sounds/Lareira.wav?raw=true')
-  const buttonPressAudio = new Audio('https://github.com/maykbrito/automatic-video-creator/blob/master/audios/button-press.wav?raw=true')
-  const kitchenTimer = new Audio('https://github.com/maykbrito/automatic-video-creator/blob/master/audios/kichen-timer.mp3?raw=true')
 
   function pressButton () {
     buttonPressAudio.play()
@@ -29,42 +30,41 @@ function Sounds() {
     kitchenTimer.play()
   }
 
-  return {
-    forestAudio,
-    rainAudio,
-    coffeeAudio,
-    fireplaceAudio,
-    buttonPressAudio,
-    pressButton,
-    endTimer,
+  function pauseMusic() {
+    forestAudio.pause()
+    rainAudio.pause()
+    coffeeAudio.pause()
+    fireplaceAudio.pause()
   }
+
+  const playForest = () => {
+    forestAudio.play()
+  }
+
+  const playRain = () => {
+    rainAudio.play()
+  }
+
+  const playCoffee = () => {
+    coffeeAudio.play()
+  }
+
+  const playFire = () => {
+    fireplaceAudio.play()
+  }
+
+    return {      
+      pressButton,
+      endTimer,
+      pauseMusic,
+      playForest,
+      playRain,
+      playCoffee,
+      playFire
+    }
 }
 
-function music() {
-  if(buttonForest.classList.contains('active')) {
-    Sounds().forestAudio.play()
-  } else {
-    Sounds().forestAudio.pause()
-  }
 
-  if(buttonRain.classList.contains('active')) {
-    Sounds().rainAudio.play()
-  } else {
-    Sounds().rainAudio.pause()
-  }
-
-  if(buttonCoffee.classList.contains('active')) {
-    Sounds().coffeeAudio.play()
-  } else {
-    Sounds().coffeeAudio.pause()
-  }
-
-  if(buttonFirePlace.classList.contains('active')) {
-    Sounds().fireplaceAudio.play()
-  } else {
-    Sounds().fireplaceAudio.pause()
-  }
-}
 
 function resetControls() {
   buttonPlay.classList.remove('hide')
@@ -154,39 +154,50 @@ buttonStop.addEventListener('click', function() {
 })
 
 buttonForest.addEventListener('click', function() {
-  buttonForest.classList.toggle('active')  
-  music()
+  buttonForest.classList.toggle('active')
+  Sounds().pauseMusic()  
+
   turnItOff(buttonFirePlace)
   turnItOff(buttonRain)  
   turnItOff(buttonCoffee)
+
   Sounds().pressButton()
+  Sounds().playForest()
 })
 
 buttonRain.addEventListener('click', function() {
   buttonRain.classList.toggle('active')
-  music() 
+  Sounds().pauseMusic()
+  
   turnItOff(buttonFirePlace)
   turnItOff(buttonForest)  
   turnItOff(buttonCoffee) 
+
   Sounds().pressButton()
+  Sounds().playRain() 
 })
 
 buttonCoffee.addEventListener('click', function() {
   buttonCoffee.classList.toggle('active') 
-  music()
+  Sounds().pauseMusic()
+ 
   turnItOff(buttonFirePlace)
   turnItOff(buttonForest)  
   turnItOff(buttonRain) 
-  Sounds().pressButton()    
+
+  Sounds().pressButton() 
+  Sounds().playCoffee()   
 })
 
 buttonFirePlace.addEventListener('click', function() {
   buttonFirePlace.classList.toggle('active') 
-  music()    
+  Sounds().pauseMusic()
+
   turnItOff(buttonCoffee)
   turnItOff(buttonForest)  
-  turnItOff(buttonRain) 
+  turnItOff(buttonRain)  
   Sounds().pressButton()
+  Sounds().playFire()
 })
 
 buttonSet.addEventListener('click', function() {  
