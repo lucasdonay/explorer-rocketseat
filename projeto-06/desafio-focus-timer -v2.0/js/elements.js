@@ -23,5 +23,5 @@ export {
   buttonCoffee,
   buttonFirePlace,
   minutesDisplay,
-  secondsDisplay
+  secondsDisplay  
 }

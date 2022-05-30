@@ -9,7 +9,7 @@ import {
   buttonRain,
   buttonCoffee,
   buttonFirePlace,
-  minutesDisplay,
+  minutesDisplay, 
   } from "./elements.js"
 
 let minutes = Number(minutesDisplay.textContent)
