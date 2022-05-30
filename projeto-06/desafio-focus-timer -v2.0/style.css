@@ -11,10 +11,14 @@
   --bg-color-light: hsla(var(--hue), 9%, 89%, 1);
   --primary-color: hsl(var(--hue), 6%, 21%);
   --secondary-color: hsl(194, 97%, 31%);
+
+  --bg-dark-mode: hsla(240, 5%, 7%, 1);
+  --color-content-dark-mode: #ffffff;
+  --color-card-dark-mode: hsla(240, 6%, 17%, 1);
 }
 
 body {
-  background: var(--bg-color);
+  /* background: var(--bg-color); */
   color: var(--primary-color);
   font-size: clamp(5rem, 5rem + 20vw, 12.6rem);
   font-family: 'Roboto', sans-serif;
@@ -32,7 +36,13 @@ main {
   align-items: center;  
 }
 
-.controls {
+.modes {
+  position: absolute;
+  top: 4.4rem;
+  right: 30.4rem;
+  cursor: pointer;
+}
+.controles {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -40,7 +50,7 @@ main {
   width: clamp(15rem, 15rem + 70vw, 34.2rem)
 }
 
-.timer {
+.timers {
   margin-bottom: 2.8rem;
 }
 
@@ -50,16 +60,23 @@ button {
   cursor: pointer;
 }
 
-.controls button:hover svg{
+.controles button:hover svg{
   width: 5.5rem;
   height: 5.3rem;
+}
+
+.volume { 
+  width: 9rem;
+  color: red;
+  background-color: var(--bg-color); 
+  cursor: grab;
+  margin-top: 1rem;
 }
 
 .sons button {
   background: none;
   border: none;
   cursor: pointer;
-  display: flex;
   align-items: center;
   justify-content: center;
   width: 13.8rem;
@@ -99,10 +116,44 @@ button {
   margin: 0 -20px 0 -20px;
 }
 
+/*Dark mode style »»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»*/
+.darkMode {
+  background-color: var(--bg-dark-mode);
+}
+.darkModeText {
+  color: var(--color-content-dark-mode);
+}
+.controlsDarkMode svg path {
+  fill: var(--color-content-dark-mode);
+}
+.card.cardDarkMode svg path {
+  fill: var(--color-card-dark-mode);
+}
+.card.cardDarkMode svg path:last-child {
+  fill: var(--color-content-dark-mode);
+}
+.card.cardDarkMode .volume {
+  background-color: var(--card-selector-content);
+}
+.card.cardDarkMode .volume::-webkit-slider-thumb {
+  background-color: var(--card-selector-content);
+}
+
+.cardDarkMode.select-card svg path {
+  fill: var(--card-selector-color-DM);
+}
+.darkModeFooter{
+  background-color: var(--color-card-dark-mode);
+}
+
 @media (max-width: 870px) {
+  .modes {
+    top: 20rem;
+    right:22rem;
+  }
   main {
     flex-direction: column;
     align-items: center;
     gap: 10rem;
-  }
+  } 
 }
