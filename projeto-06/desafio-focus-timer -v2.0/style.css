@@ -126,16 +126,18 @@ button {
 .controlsDarkMode svg path {
   fill: var(--color-content-dark-mode);
 }
-.card.cardDarkMode svg path {
-  fill: var(--color-card-dark-mode);
+
+.sons button.teste22 {
+  background-color: var(--color-card-dark-mode);
 }
-.card.cardDarkMode svg path:last-child {
-  fill: var(--color-content-dark-mode);
+
+.sons.cardDarkMode svg path {
+  fill: var(--color-content-dark-mode); 
 }
-.card.cardDarkMode .volume {
+.sons.cardDarkMode .volume {
   background-color: var(--card-selector-content);
 }
-.card.cardDarkMode .volume::-webkit-slider-thumb {
+.sons.cardDarkMode .volume::-webkit-slider-thumb {
   background-color: var(--card-selector-content);
 }
 

@@ -8,13 +8,17 @@ import {
   buttonStop,
   buttonSet, 
   minutesDisplay,
-  secondsDisplay,} from "./elements.js"
+  secondsDisplay,
+  buttonForest,
+  buttonRain,
+  buttonCoffee,
+  buttonFirePlace} from "./elements.js"
 
 let btnLightMode = document.querySelector('.ligthMode')
 let btnDarkMode = document.querySelector('.darkMode')
 let timers = document.querySelector('.timers')
 let controles = document.querySelector('.controles')
-let cards = document.querySelector('.card')
+let cards = document.querySelector('.sons')
 
 btnLightMode.addEventListener('click', function() {
   btnLightMode.classList.add('hide')
@@ -23,6 +27,10 @@ btnLightMode.addEventListener('click', function() {
   timers.classList.add('darkModeText')
   controles.classList.add('controlsDarkMode')
   cards.classList.add('cardDarkMode')
+  buttonForest.classList.add('teste22')
+  buttonRain.classList.add('teste22')
+  buttonCoffee.classList.add('teste22')
+  buttonFirePlace.classList.add('teste22')
   
 })
 
@@ -33,8 +41,13 @@ btnDarkMode.addEventListener('click', function() {
   timers.classList.remove('darkModeText')
   controles.classList.remove('controlsDarkMode')
   cards.classList.remove('cardDarkMode')
+  buttonForest.classList.remove('teste22')
+  buttonRain.classList.remove('teste22')
+  buttonCoffee.classList.remove('teste22')
+  buttonFirePlace.classList.remove('teste22')
   
 })
+
 
 const controls = Controls({
   buttonPause,
@@ -46,7 +59,7 @@ const controls = Controls({
 const timer = Timer({
   minutesDisplay,
   secondsDisplay,     
-  resetControls: controls.reset
+  resetControls: controls.resetControls
 })
 
 const sound = Sound()
