@@ -10,6 +10,11 @@ const buttonCoffee = document.querySelector('.coffee')
 const buttonFirePlace = document.querySelector('.fireplace')
 const minutesDisplay = document.querySelector('.minutes')
 const secondsDisplay = document.querySelector('.seconds')
+const btnLightMode = document.querySelector('.ligthMode')
+const btnDarkMode = document.querySelector('.darkMode')
+const timers = document.querySelector('.timers')
+const controles = document.querySelector('.controles')
+const cards = document.querySelector('.sons')
 
 export {
   buttonPlay,
@@ -23,5 +28,10 @@ export {
   buttonCoffee,
   buttonFirePlace,
   minutesDisplay,
-  secondsDisplay  
+  secondsDisplay,
+  btnDarkMode,
+  btnLightMode,
+  timers,
+  controles,
+  cards 
 }
