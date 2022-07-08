@@ -12,27 +12,20 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body class="body-one">
 
   <header>
-    <img src="./img/Vector.png" alt="imagem buraco negro">
+    <img class="teste" src="./img/Vector.png" alt="imagem buraco negro">
     <nav>
-      <a href="#">Home</a>
-      <a href="#">O Universo</a>
-      <a href="#">Exploração</a>
+      <a href="/home" onclick="route()">Home</a>
+      <a href="/universo" onclick="route()">O Universo</a>
+      <a href="/exploracao" onclick=" route()">Exploração</a>
     </nav>
   </header>
 
-  <main>
-    <div class="container">
-      <h1>Explore o universo</h1>
-      <button>QUERO SABER MAIS</button>
-    </div>
-  </main>
+  <div id="app"></div>
 
-
-
-  <script src="./js/index.js"></script>
+  <script src="./js/index.js" type="module"></script>
 </body>
 
 </html>
