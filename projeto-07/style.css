@@ -5,138 +5,107 @@
 }
 
 :root {
+  font-family: "Roboto", sans-serif;
   font-size: 62.5%;
+  font-weight: normal;
+  color: var(--color-font-selected);
+
+  --color-font-selected: white;
+  --color-font: #c4c4cc;
+  --color-font-secondary: #e1e1e6;
 }
 
-.body-one {
-  background-image: url('./img/mountains-universe-1\ 1.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  height: 100vh;
-  font-family: 'Roboto', sans-serif;  
-}
-
-.body-two {
-  background-image: url('./img/mountains-universe-2.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  height: 100vh;
-  font-family: 'Roboto', sans-serif; 
-}
-
-.body-three {
-  background-image: url('./img/mountains-universe-3.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  height: 100vh;
-  font-family: 'Roboto', sans-serif; 
-}
-
-header {
-  display: flex;
-  align-items: center;  
-  margin: 4rem 0 0 7.2rem;  
-}
-
-.teste:hover {
-  width: 2.7%;
-  cursor: pointer;
-}
-
-nav {
-  display: flex;
-  gap: 3.2rem;
-  margin-left: 3.2rem;
-  font-size: 2.1rem;
-  font-style: normal;
-  font-weight: 400;
+html {
+  height: 100%;
 }
 
 a {
   text-decoration: none;
-  color: #C4C4CC;
+  color: var(--color-font);
 }
 
-a:focus {
-  color: #FFFFFF;
-  font-weight: 700;
-  font-size: 2.2rem;
-}
+nav {
+  margin: 4rem 7.2rem;
 
-a:hover {
-  color: #FFFFFF;
-  font-weight: 700;
-  font-size: 2.2rem;
-}
-
-main {
   display: flex;
-  flex-direction: column; 
-  max-width: 500px;
-  margin: 294px auto 0;
-}
-
-.two {
-  display: flex;
-  flex-direction: column; 
-  max-width: 500px;
-  margin: 294px 0 0 10.2rem;
-}
-
-.container {
-  display: flex;
-  flex-direction: column;
   gap: 3.2rem;
+  align-items: center;
+}
+
+nav a {
+  font-size: 2.4rem;
 }
 
 h1 {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 700;
+  font-weight: bold;
   font-size: 4.8rem;
   line-height: 125%;
-  color: #E1E1E6;
-}
-
-h2 {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 4.8rem;
-  line-height: 125%;
-  color: #E1E1E6;
-}
-
-p {
-  font-weight: 400;
-  font-size: 1.8rem;
-  line-height: 160%;
-  color: #E1E1E6;
-  width: 64rem;
+  color: var(--color-font-secondary);
 }
 
 .button {
-  background: transparent;
-  justify-content: center;
-  align-items: center;
-  padding: 12px 32px;
-  color: #FFFFFF;
-  border: 2px solid #FFFFFF;
-  border-radius: 5px;
   cursor: pointer;
-  font-weight: 600;
+  align-items: center;
+  width: 19.5rem;
+  height: 4.8rem;
   font-size: 1.4rem;
-  line-height: 2.4rem;
-  width: 225px;
-  margin-left: 90px;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+
+  border: 2px solid var(--color-font-selected);
+  border-radius: 5px;
+
+  background-color: transparent;
+  color: var(--color-font-selected);
+
+  margin-top: 2.4rem;
 }
 
 .button:hover {
-  color: #02799D;
-  background-color: #FFFFFF;
-  font-size: 1.5rem;
-  font-weight: 700;
+  background-color: var(--color-font-selected);
+  color: #02799d;
+  font-weight: bold;
+
+  border: none;
+}
+
+p {
+  font-size: 1.8rem;
+  color: var(--color-font-secondary);
+  line-height: 160%;
+
+  text-align: start;
+
+  margin-top: 1.6rem;
+}
+
+.selected {
+  font-weight: bold;
+  color: var(--color-font-selected);
+}
+
+#app img:nth-child(1) {
+  height: 100vh;
+  width: 100vw;
+  object-fit: cover;
+  position: fixed;
+  top: 0;
+  z-index: -1;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 70vh;
+}
+
+.theUniverse, .exploration {
+  margin: 6.3rem 7.5rem;
+
+  max-width: 64.8rem;
 }

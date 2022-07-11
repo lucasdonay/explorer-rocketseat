@@ -4,26 +4,26 @@
 <head>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SPA Universe</title>
-  <link rel="stylesheet" href="./style.css">
+
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css" />
+
+  <title>SPA Universe</title>
 </head>
 
-<body class="body-one">
+<body>
+  <nav>
+    <img src="./img/Vector.png"></object>
+    <a href="/" onclick="route()">Home</a>
+    <a href="/universo" onclick="route()">O Universo</a>
+    <a href="/exploracao" onclick="route()">Exploração</a>
+  </nav>
 
-  <header>
-    <img class="teste" src="./img/Vector.png" alt="imagem buraco negro">
-    <nav>
-      <a href="/home" onclick="route()">Home</a>
-      <a href="/universo" onclick="route()">O Universo</a>
-      <a href="/exploracao" onclick=" route()">Exploração</a>
-    </nav>
-  </header>
-
-  <div id="app"></div>
+  <main id="app"></main>
 
   <script src="./js/index.js" type="module"></script>
 </body>
