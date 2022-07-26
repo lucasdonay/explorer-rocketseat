@@ -7,7 +7,18 @@ export class Favorites {
 export class FavoritesView extends Favorites {
   constructor(root) {
     super(root)
+    this.update()
+  }
 
-    console.log(this.root);
+  update() {
+    this.removeAllTr()
+  }
+
+  removeAllTr() {
+    const tbody = this.root.querySelector('table tbody')
+
+    tbody.querySelectorAll('tr').forEach(tr => {
+      tr.remove()
+    });
   }
 }
