@@ -1,8 +1,23 @@
+export class GithubUser {
+  static search(username) {
+    const endpoint = `https://api.github.com/users/${username}`
+    return fetch(endpoint).then(data => data.json())
+    .then(({ login, name, public_repos, followers }) => ({
+      login,
+      name,
+      public_repos,
+      followers
+    }))
+  }
+}
+
+//Class que contem a logica dos dados e como serao estruturados
 export class Favorites {
   constructor(root) {
     this.root = document.querySelector(root);
     this.load()
     
+    GithubUser.search('diego3g').then(user => console.log(user))
   }
 
   load() {
@@ -18,12 +33,22 @@ export class Favorites {
   }
 }
 
+//Classe que vai criar a visualizacao e eventos do HTML
 export class FavoritesView extends Favorites {
   constructor(root) {
     super(root)
     
     this.tbody = this.root.querySelector('table tbody')
     this.update()
+    this.onAdd()
+  }
+
+  onAdd() {
+    const addButton = this.root.querySelector('.search button')
+    addButton.onclick = () => {
+      const input = this.root.querySelector('.search input')
+      console.dir(input);
+    }
   }
 
   update() {
