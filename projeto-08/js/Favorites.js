@@ -1,28 +1,40 @@
-export class GithubUser {
-  static search(username) {
-    const endpoint = `https://api.github.com/users/${username}`
-    return fetch(endpoint).then(data => data.json())
-    .then(({ login, name, public_repos, followers }) => ({
-      login,
-      name,
-      public_repos,
-      followers
-    }))
-  }
-}
+import { GithubUser } from "./GitHubUser.js";
 
 //Class que contem a logica dos dados e como serao estruturados
 export class Favorites {
   constructor(root) {
     this.root = document.querySelector(root);
     this.load()
-    
-    GithubUser.search('diego3g').then(user => console.log(user))
+   
   }
 
   load() {
     this.entries = JSON.parse(localStorage.getItem('@github-favorites:')) || []
-    console.log(this.entries);
+    }
+
+  save() {
+    localStorage.setItem('@github-favorites:', JSON.stringify(this.entries))
+  }
+
+  async add(username) {
+    try {
+    
+    const userExist = this.entries.find(entry => entry.login === username)
+    
+    if(userExist) {
+      throw new Error("Usuario ja esta na tela")
+    }
+
+    const user = await GithubUser.search(username)
+    
+
+    this.entries = [user, ...this.entries]
+    this.update()
+    this.save()
+      
+    } catch(error) {
+      alert(error.message)
+    }
   }
 
   delete(user) {
@@ -30,6 +42,7 @@ export class Favorites {
 
     this.entries = filteredEntries
     this.update()
+    this.save()
   }
 }
 
@@ -45,10 +58,21 @@ export class FavoritesView extends Favorites {
 
   onAdd() {
     const addButton = this.root.querySelector('.search button')
+
+    const input = document.getElementById("input-search");
+
     addButton.onclick = () => {
-      const input = this.root.querySelector('.search input')
-      console.dir(input);
+      const { value } = this.root.querySelector('.search input')
+      this.add(value)      
     }
+
+    input.addEventListener("keypress", function(event) {
+      if (event.key === "Enter") {        
+        event.preventDefault();
+        addButton.onclick()
+      }
+    });
+
   }
 
   update() {
