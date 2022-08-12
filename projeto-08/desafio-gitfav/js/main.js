@@ -1,9 +1,3 @@
-const but = document.querySelector('button')
+import { FavoritesView } from "./Favorites.js";
 
-const tableBorder = document.querySelector('tbody')
-
-
-but.addEventListener('click', function() {
-   tableBorder.classList.remove('clean-table');
-  console.log("teste");
- })
+new FavoritesView("#app");
