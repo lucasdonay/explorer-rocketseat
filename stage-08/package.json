@@ -1,0 +1,14 @@
+{
+  "name": "stage-08",
+  "version": "1.0.0",
+  "description": "API Desenvolvida no stage 08",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Lucas Donay",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
