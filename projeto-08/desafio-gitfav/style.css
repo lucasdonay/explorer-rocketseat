@@ -235,10 +235,12 @@ td.remove button:hover {
 }
 
 .clean-table {
-  background-image: url(img/Nenhum.svg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-
   height: 32rem;
+}
+
+.img2 {
+  background-image: url(img/Nenhum.svg);
 }
