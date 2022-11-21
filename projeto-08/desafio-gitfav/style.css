@@ -139,10 +139,16 @@ table td {
 
 table tr:nth-child(odd) {
   background: rgba(6, 22, 27, 0.5);
+  border-bottom: 1px solid #4A808C;
 }
 
 table tr:nth-child(even) {
   background: rgba(133, 233, 255, 0.076);
+  border-bottom: 1px solid #4A808C;
+}
+
+table tr:last-child {
+  border-bottom: none;
 }
 
 table th:first-child,
@@ -158,8 +164,7 @@ table td {
 table tr {
   display: table;
   width: 100%; 
-  table-layout: auto;
-  border-bottom: 1px solid #4A808C;
+  table-layout: auto; 
 }
 
 td.user {
@@ -202,7 +207,7 @@ td.remove button:hover {
 }
 
 .table-border {
-  border: 2px solid #4A808C;
+  border: 3px solid #4A808C;
   border-radius: 1.2rem;
   -webkit-border-radius: 1.2rem;
   -moz-border-radius: 1.2rem;
@@ -235,5 +240,5 @@ td.remove button:hover {
   background-repeat: no-repeat;
   background-size: contain;
 
-  height: 40rem;
+  height: 32rem;
 }
