@@ -2,14 +2,13 @@ import styled from "styled-components";
 
 export const Container = styled.button`
 
-  width: 60%;
+  width: 100%;
   background-color: ${({ theme }) => theme.COLORS.ORANGE};
   color: ${({ theme }) => theme.COLORS.BACKGROUND_800};
 
   height: 56px;
-  border: 0;
+  border: none;
   padding: 0 16px;
-  margin-left: 250px;
   margin-top: 20px;
   border-radius: 10px;
   font-weight: 500;

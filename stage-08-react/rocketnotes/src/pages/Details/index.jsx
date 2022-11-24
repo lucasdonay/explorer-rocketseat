@@ -1,22 +1,43 @@
-import { Container, Links } from "./styles"
+import { Container, Links, Content } from "./styles"
 import { Button } from "../../components/Button"
+import { ButtonText } from "../../components/ButtonText"
 import { Header } from "../../components/Header"
 import { Section } from "../../components/Section"
+import { Tags } from "../../components/Tags"
 
 export function Details() {
   return (
     <Container>
       <Header />
 
-      <Section title="Links Uteis">  
-          <Links>
-          <li>1</li>
-          <li>2</li>
-          <li>3</li>
-          </Links>
-      </Section>
+     <main>
+        <Content>
+          
+        <ButtonText title="Excluir Nota"/>
 
-      <Button title="Voltar"/>
+        <h1>Introdução ao React</h1>
+
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        </p>
+
+        <Section title="Links Uteis">  
+            <Links>
+            <li><a href="https://www.rocketseat.com.br">Link 01</a></li>
+            <li><a href="https://www.rocketseat.com.br">Link 02</a></li>
+            <li><a href="https://www.rocketseat.com.br">Link 03</a></li>
+            </Links>
+        </Section>
+
+        <Section title="Marcadores">  
+          <Tags title={"express"}/>
+          <Tags title={"nodejs"}/>
+        </Section>
+
+        <Button title="Voltar"/>
+
+        </Content>
+      </main>
+
     </Container>
   )
 }
