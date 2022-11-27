@@ -14,6 +14,7 @@ padding: 0 80px;
 export const Profile = styled.div`
   display: flex;
   align-items: center;
+  
 
   > img {
     width: 60px;
