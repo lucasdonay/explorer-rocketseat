@@ -53,15 +53,19 @@ li:nth-child(1) {
 
 export const Search = styled.div`
 grid-area: search;
-padding: 64px 74px 0;
+padding: 64px 64px 0;
 
 `
 
 export const Content = styled.div`
 grid-area: content;
 background:  ${({ theme }) => theme.COLORS.BACKGROUND_800};
-margin: 0 auto;
-width: 1500px;
+padding: 0 64px;
+overflow-y: scroll;
+margin-top: 22px;
+::-webkit-scrollbar {
+    display: none;
+}
 
 > h1 {
   color: ${({ theme }) => theme.COLORS.GRAY_100};

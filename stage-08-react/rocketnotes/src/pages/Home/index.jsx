@@ -6,6 +6,9 @@ import { Input } from '../../components/Input'
 import { Header } from '../../components/Header'
 import { ButtonText } from '../../components/ButtonText'
 
+import { Section } from '../../components/Section'
+import { Notes } from '../../components/Notes'
+
 export function Home() {
   return(
     <Container>
@@ -25,7 +28,24 @@ export function Home() {
           </Search>
 
             <Content>
-              <h1>Minhas Notas</h1>
+              <Section title="Minhas Notas">
+
+                  <Notes data={{
+                    title: 'React',
+                    tags: [
+                      {id: '1', name: 'react'},
+                      {id: '2', name: 'rocktseat'}
+                    ]
+                  }}/>
+                   <Notes data={{
+                    title: 'React',
+                    tags: [
+                      {id: '1', name: 'vue'},
+                      {id: '2', name: 'ingressolive'}
+                    ]
+                  }}/>
+
+              </Section>
             </Content>
 
               <NewNote>
