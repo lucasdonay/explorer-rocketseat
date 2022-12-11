@@ -17,13 +17,9 @@ export const Container = styled.div`
 `
 
 export const Form = styled.form`
-width: 100%;
 max-width: 340px;
-margin: 0 auto;
-margin-top: 157px;
-display: flex;
-flex-direction: column;
-justify-content: center;
+margin: -100px auto 0;
+
 
 .white ::placeholder{
   color: white;  
@@ -33,17 +29,45 @@ justify-content: center;
     color: white;
   }
 
+  .white:nth-child(-n+2) {
+    color: white;
+    margin-bottom: 20px;
+  }
+
 `
 export const Avatar = styled.div`
+  margin: 0 auto 32px;
+  position: relative;
+  width: 186px;
+  height: 186px;
+
 
 img {
-  width: 200px;
-  height: 200px;
+  width: 186px;
+  height: 186px;
   border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: -250px auto 62px;
+
 }
+
+> label {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: ${({ theme }) => theme.COLORS.ORANGE};
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: absolute;
+  bottom: 7px;
+  right: 7px;
+  cursor: pointer;
+
+  input {
+    display: none;
+  }
+}
+
+
 
 `
