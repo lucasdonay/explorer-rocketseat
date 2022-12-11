@@ -16,11 +16,13 @@ export function Profile() {
 
         <Avatar>
         <img src="https://github.com/lucasdonay.png" alt="Foto do Usuario" />
+
         <label htmlFor="avatar">
           <FiCamera/>
           <input id='avatar'
           type='file' />
         </label>
+        
         </Avatar>
 
         <div className='white'>
