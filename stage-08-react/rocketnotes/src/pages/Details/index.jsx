@@ -3,7 +3,7 @@ import { Button } from "../../components/Button"
 import { ButtonText } from "../../components/ButtonText"
 import { Header } from "../../components/Header"
 import { Section } from "../../components/Section"
-import { Tags } from "../../components/Tags"
+import { Tag } from "../../components/Tags"
 
 export function Details() {
   return (
@@ -29,8 +29,8 @@ export function Details() {
         </Section>
 
         <Section title="Marcadores">  
-          <Tags title={"express"}/>
-          <Tags title={"nodejs"}/>
+          <Tag title={"express"}/>
+          <Tag title={"nodejs"}/>
         </Section>
 
         <Button title="Voltar"/>
