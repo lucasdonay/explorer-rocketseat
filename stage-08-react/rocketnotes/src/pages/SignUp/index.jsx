@@ -34,11 +34,11 @@ export function SignUp() {
           icon={FiLock}
         />
 
-       <Button title="Entrar"/>
+       <Button title="Criar Conta"/>
 
-      <a href='#'>
+      <Link to='/'>
         Voltar para o login
-      </a>
+      </Link>
 
       </Form>
      
