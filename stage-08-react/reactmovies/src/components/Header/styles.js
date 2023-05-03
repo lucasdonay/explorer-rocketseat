@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-
 export const Container = styled.div`
   width: 100%;
   height: 100px;
@@ -13,12 +12,16 @@ export const Container = styled.div`
   align-items: center;
   padding: 24px 123px;
 
-  > h1 {
+  h1 {
     font-style: normal;
     font-weight: 700;
     font-size: 24px;
     line-height: 32px;
     color: ${({ theme }) => theme.COLORS.PRIMARY};
+  }
+
+  @media (max-width: 700px) {
+    padding: 5px;
   }
 `;
 
@@ -31,8 +34,9 @@ export const Profile = styled.div`
     flex-direction: column;
     align-items: flex-end;
     padding-right: 10px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 
-    > span {
+    span {
       font-weight: 700;
       font-size: 1.5rem;
       line-height: 18px;
@@ -44,7 +48,7 @@ export const Profile = styled.div`
     font-weight: 400;
   }
 
-  > img {
+  img {
     border-radius: 50%;
     height: 70px;
     width: 70px;

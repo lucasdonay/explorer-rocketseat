@@ -21,10 +21,8 @@ export const Container = styled.button`
       opacity: 1;
     }
   }
-`;
 
-export const Profile = styled.div`
-  border-radius: 50%;
-  height: 50px;
-  width: 50px;
+  > svg {
+    color: red;
+  }
 `;
