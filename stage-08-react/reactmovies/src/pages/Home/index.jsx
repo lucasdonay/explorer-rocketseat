@@ -1,20 +1,20 @@
 
 import { Header } from '../../components/Header';
-import { Container,NewMovie } from './styles';
+import { Container, NewMovie } from './styles';
 import { FiPlus } from "react-icons/fi";
 
 
 export function Home() {
   return (
     <Container>
-      <Header>  
-      </Header>   
+      <Header/>          
 
         <main>
+
           <header>
               <h1>Meus filmes</h1>
 
-              <NewMovie to='/new'>    
+              <NewMovie to="/new">    
                   <FiPlus />              
                       Adicionar filme            
               </NewMovie>
