@@ -6,7 +6,7 @@ export default {
 
     WHITE: '#F4EDE8',
     PRIMARY: '#FF859B',
-    SECOND: '#FF859B',
+    SECOND: 'rgba(255, 133, 155, 0.05)',
 
     GRAY_100: '#999591',
     GRAY_200: '#CAC4CF',
