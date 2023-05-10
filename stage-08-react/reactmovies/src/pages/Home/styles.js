@@ -35,6 +35,9 @@ export const Container = styled.div`
 export const Content = styled.div`
   max-height: calc(100vh - 297px);
   overflow-y: auto;
+  display: flex;
+  gap: 24px;
+  flex-direction: column;
 
   ::-webkit-scrollbar {
     width: 8px;

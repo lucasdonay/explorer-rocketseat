@@ -1,8 +1,9 @@
 
 import { Header } from '../../components/Header';
-import { Container, NewMovie } from './styles';
+import { Container, NewMovie,Content } from './styles';
 import { FiPlus } from "react-icons/fi";
 
+import { Movies } from '../../components/Movies';
 
 export function Home() {
   return (
@@ -19,6 +20,12 @@ export function Home() {
                       Adicionar filme            
               </NewMovie>
          </header>
+
+        <Content>
+          <Movies/>
+          <Movies/>
+          <Movies/>
+        </Content>
 
 
         </main>    
