@@ -23,6 +23,18 @@ export const Container = styled.div`
   @media (max-width: 700px) {
     padding: 5px;
   }
+
+  a,
+  button {
+    cursor: pointer;
+  }
+`;
+
+export const Search = styled.div`
+  display: flex;
+  align-items: center;
+  padding: 0 64px;
+  flex-grow: 1;
 `;
 
 export const Profile = styled.div`

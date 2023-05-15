@@ -1,10 +1,13 @@
 import { Container } from './styles';
+import { Rating } from '../Rating';
+import { Tag } from '../Tag';
 
 export function Movies() {
   return (
-    <Container>
+    <Container to="/detalhes">
       <h1>Interestellar</h1>
 
+      <Rating grade={3} isBigSize={false} />
       <p>
         Pragas nas colheitas fizeram a civilização humana regredir para uma
         sociedade agrária em futuro de data desconhecida. Cooper, ex-piloto da
@@ -35,6 +38,12 @@ export function Movies() {
         Doyle e atrasando a partida. Ao voltarem para a Endurance, Cooper e
         Amelia descobrem que 23 anos se passaram.
       </p>
+
+      {
+        <footer>
+          <Tag title="Teste"/>
+        </footer>
+      }
     </Container>
   );
 }

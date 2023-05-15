@@ -1,5 +1,14 @@
+import { Container } from "./style"
+import { Header } from "../../components/Header"
+
 export function New() {
   return (
-    <h2>New</h2>
+    <Container>
+    <Header/>
+
+
+
+    
+    </Container>
   )
 }

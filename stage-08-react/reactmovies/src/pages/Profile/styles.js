@@ -11,6 +11,19 @@ export const Container = styled.div`
     align-items: center;
     padding: 0 144px;
   }
+
+  button,
+  a {
+    opacity: 0.7;
+    transition: 0.3s ease-in-out;
+    margin-top: 20px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    opacity: 1;
+    color: white;
+  }
 `;
 
 export const Form = styled.form`
@@ -19,16 +32,6 @@ export const Form = styled.form`
 
   #avatar {
     display: none;
-  }
-
-  button {
-    opacity: 0.6;
-    transition: 0.3s ease-in-out;
-    margin-top: 20px;
-  }
-
-  button:hover {
-    opacity: 1;
   }
 
   .white div:nth-child(n + 1):nth-child(-n + 2),

@@ -5,6 +5,17 @@ export const Container = styled.div`
   width: 100%;
   height: 100vh;
 
+  .input {
+    width: 100%;
+    align-items: center;
+    display: flex;
+    padding: 0 64px;
+    justify-content: center;
+    div {
+      max-width: 800px;
+      width: 100%;
+    }
+  }
   display: grid;
   grid-template-rows: 116px auto;
   grid-template-areas:

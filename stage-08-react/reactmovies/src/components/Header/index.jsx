@@ -1,14 +1,16 @@
-import { Container, Profile } from './styles';
-import { Input } from '../../components/Input';
+import { Container, Profile, Search } from './styles';
 import { Link } from 'react-router-dom';
-export function Header() {
+export function Header({ children }) {
   return (
     <Container>
       <Link to="/">
         <h1>RocketMovies</h1>
       </Link>
 
-      <Input placeholder="Pesquisar pelo título" />
+      <Search>
+        {children}
+      </Search>
+      
       <Profile>
         <div>
           <Link to="/profile">

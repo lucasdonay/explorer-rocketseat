@@ -9,4 +9,5 @@ export const Container = styled.button`
   align-items: center;
   gap: 8px;
   margin-bottom: 24px;
+  cursor: pointer;
 `;
