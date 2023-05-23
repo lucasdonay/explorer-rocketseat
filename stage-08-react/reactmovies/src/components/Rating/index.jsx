@@ -1,6 +1,6 @@
-import { Container } from "./styles";
+import { Container } from './styles';
 
-import { IoStarSharp, IoStarOutline } from "react-icons/io5";
+import { IoStarSharp, IoStarOutline } from 'react-icons/io5';
 
 export function Rating({ grade, isBigSize }) {
   let stars = [];
