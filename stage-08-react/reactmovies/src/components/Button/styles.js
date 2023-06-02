@@ -8,6 +8,7 @@ export const Container = styled.button`
   border: 0;
   padding: 0 16px;
   border-radius: 10px;
+  cursor: pointer;
   font-weight: 500;
   opacity: 1;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));

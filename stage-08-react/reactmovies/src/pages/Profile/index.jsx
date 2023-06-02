@@ -31,12 +31,11 @@ export function Profile() {
         </Avatar>
 
         <div className="white">
+          <Input placeholder="Lucas Donay" icon={FiUser} />
+          <Input placeholder="lucas.donay@gmail.com" icon={FiMail} />
 
-        <Input placeholder="Lucas Donay" icon={FiUser} />
-        <Input placeholder="lucas.donay@gmail.com" icon={FiMail} />
-
-        <Input placeholder="Senha Atual" icon={FiLock} />
-        <Input placeholder="Nova Senha" icon={FiLock} />
+          <Input placeholder="Senha Atual" icon={FiLock} />
+          <Input placeholder="Nova Senha" icon={FiLock} />
         </div>
         <Button title="Salvar" />
       </Form>
