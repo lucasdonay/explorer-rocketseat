@@ -1,34 +1,33 @@
-require("express-async-errors")
-const migrationsRun = require("./database/sqlite/migrations")
+require('express-async-errors');
+const migrationsRun = require('./database/sqlite/migrations');
 
-const AppError = require("./utils/AppError")
+const AppError = require('./utils/AppError');
 
-const express = require("express")
+const express = require('express');
 
-const routes = require("./routes")
+const routes = require('./routes');
 
 migrationsRun();
 
-const app = express()
+const app = express();
 
+app.use(express.json());
 
-app.use(express.json())
-
-app.use(routes)
+app.use(routes);
 
 app.use((error, request, response, next) => {
-  if(error instanceof AppError) {
+  if (error instanceof AppError) {
     return response.status(error.statusCode).json({
-      status: "error",
-      message: error.message
+      status: 'error',
+      message: error.message,
     });
   }
 
-console.error(error);
+  console.error(error);
 
   return response.status(500).json({
-    status: "error",
-    message: "Interval server error"
+    status: 'error',
+    message: 'Interval server error',
   });
 });
 
